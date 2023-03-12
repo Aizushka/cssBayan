@@ -23,39 +23,50 @@ hr {
     max-height: 100%;
 }
 
-.acc_title {
+.label {
     padding:  0.5rem 0;
     display: block;
     cursor: pointer;
     
+    color: #0150c3;
+}
+
+.acc_title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    color: #0150c3;
-    /* transition: background .3s linear; */
 }
 
-.acc_title:hover + .acc_img{
-    display: block;
+.plus {
+    transition: 0.4s;
 }
 
-.acc_input:checked ~ .acc_img {
+.acc_input:checked ~ .label>.acc_img  {
     overflow:visible;
     max-height: 60vh;
     opacity: 1;
 }
 
-.acc_input:checked  + .acc_title{
+.acc_input:checked  ~ .label>.acc_title{
     color: #000;
 }
 
-.acc_input:checked ~ .acc_title>.plus {
+.acc_input:checked ~ .label>.acc_title>.plus {
     transform: rotate(45deg);
 }
 
-.plus {
-    transition: 0.4s;
+.label:hover > .acc_img {
+    overflow: visible;
+    max-height: 60vh;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.acc_img:hover {
+    overflow: visible;
+    max-height: 60vh;
+    opacity: 1;
+    cursor: pointer;
 }
 
 .acc_img {
