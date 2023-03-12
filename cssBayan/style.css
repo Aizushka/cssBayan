@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Acordion */
+
+.main {
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 500px; 
+    min-height: 300px;
+}
+
+.item {
+    margin-bottom: 5px;
+}
+
+.acord_title {
+    padding:  10px 15px;
+    display: block;
+    cursor: pointer;
+    transition: background .3s linear;
+}
+
+.acord_title:hover + .acord_img{
+    display: block;
+}
+
+.acord_input:checked ~ .acord_img {
+    display: block;
+}
+
+.acord_img {
+    display: none;
+    padding: 10px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; 
+    max-height: 500px;
+    background-color: violet;
+}
