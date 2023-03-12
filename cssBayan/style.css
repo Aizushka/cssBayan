@@ -30,6 +30,10 @@ hr {
     color: #0150c3;
 }
 
+.label:active {
+    opacity: 0.5;
+}
+
 .acc_title {
     display: flex;
     justify-content: space-between;
@@ -37,7 +41,7 @@ hr {
 }
 
 .plus {
-    transition: 0.4s;
+    transition: 0.5s;
 }
 
 .acc_input:checked ~ .label>.acc_img  {
@@ -58,7 +62,7 @@ hr {
     overflow: hidden;
     max-height: 0;
     opacity: 0;
-    transition: 0.4s;
+    transition: 0.5s;
 }
 
 img {
@@ -71,7 +75,7 @@ img {
 /* MEDIA */
 
 @media (hover: hover) { 
-
+   
     .acc_img:hover {
         overflow: visible;
         max-height: 60vh;
@@ -86,6 +90,13 @@ img {
         cursor: pointer;
     }
 
+    .plus {
+        opacity: 0;
+    }
+
+    .main:hover .plus {
+        opacity: 1;
+    }
 }
 
 @media (min-width: 576px) {
