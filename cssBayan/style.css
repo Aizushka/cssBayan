@@ -53,14 +53,14 @@ hr {
 .acc_img {
     display: block;
     margin: 0 auto;
-    height: 25vh;
-    opacity: 1;
     transition: 0.5s;
+    height: 0;
+    opacity: 0;
 }
 
 .acc_input:checked ~ .label>.acc_img  {
-    height: 25vh;
     margin-top: 0.5rem;
+    height: 25vh;
     opacity: 1;
 }
 
@@ -75,24 +75,16 @@ hr {
 /* MEDIA */
 
 @media (hover: hover) { 
-   
-    .acc_img {
-        display: block;
-        margin: 0 auto;
-        height: 0;
-        opacity: 0;
-        transition: 0.5s;
-    }
 
     .acc_img:hover {
-        height: 5rem;
+        height: 25vh;
         opacity: 1;
         cursor: pointer;
     }
 
     .label:hover > .acc_img {
-        height: 25vh;
         margin-top: 0.5rem;
+        height: 25vh;
         opacity: 1;
         cursor: pointer;
     }
