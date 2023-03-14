@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+
+html {
+    overflow-x: hidden;
+    width: 100vw;
+    color: #000;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+hr {
+    opacity: 0.3;
+}
+
+/* Accordion */
+
+.main {
+    margin: 0 auto;
+    padding: 1rem 1rem 0;
+    width: 100%; 
+}
+
+.label {
+    padding:  0.5rem 0;
+    display: block;
+    cursor: pointer;
+    
+    color: #0150c3;
+}
+.label:active {
+    opacity: 0.5;
+}
+
+.acc_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plus {
+    transition: 0.5s;
+}
+
+.acc_img {
+    display: block;
+    margin: 0 auto;
+    transition: 0.5s;
+    height: 0;
+    opacity: 0;
+}
+
+.acc_input:checked ~ .label>.acc_img  {
+    margin-top: 0.5rem;
+    height: 25vh;
+    opacity: 1;
+}
+
+.acc_input:checked  ~ .label>.acc_title{
+    color: #000;
+}
+
+.acc_input:checked ~ .label>.acc_title>.plus {
+    transform: rotate(135deg);
+}
+
+/* MEDIA */
+
+@media (hover: hover) { 
+
+    .acc_img:hover {
+        height: 25vh;
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .label:hover > .acc_img {
+        margin-top: 0.5rem;
+        height: 25vh;
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .plus {
+        opacity: 0;
+    }
+    .main:hover .plus {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 576px) {
+    * {
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+    h1 {
+        font-size: 1.8rem;
+        margin: 1rem 0;
+    }
+    .main {
+        width: 80vw; 
+        max-width: 700px;
+    }
+    .label {
+        padding: 0.5rem 0;
+    }
+}
+
+@media (min-width: 992px) {
+    * {
+        font-size: 1.3rem;
+        font-weight: 900;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}
